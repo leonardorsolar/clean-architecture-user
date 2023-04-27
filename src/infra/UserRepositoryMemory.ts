@@ -1,15 +1,14 @@
-export default class Signup {
+export default class UserRepositoryMemory {
   constructor(readonly variável: string) {}
 
-  execute(input: any): any {
-    return input;
+  save(user: any): any {
+    //armazenar no banco
+    //armazenar em memória
+    return user;
+  }
+  getByEmail(email: any): any {
+    //armazenar no banco
+    //armazenar em memória
+    return email;
   }
 }
-
-type Input = {
-  firstName: string;
-  lastName: string;
-  email: string;
-  password: string;
-  age: number;
-};

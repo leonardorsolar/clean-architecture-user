@@ -4,13 +4,12 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "start:dev" : "nodemon src/index.ts",
-   "dev": "nodemon --watch 'src/' --exec 'ts-node src/index.ts' -e ts",
+    "start:dev": "nodemon src/index.ts",
+    "dev": "nodemon --watch 'src/' --exec 'ts-node src/index.ts' -e ts",
     "start": "tsc && node ./build/src/index.js",
     "test": "tsc && jest ./build/test",
     "build": "tsc"
   },
- 
   "dependencies": {
     "@types/express": "^4.17.17",
     "@types/jest": "^29.5.1",
