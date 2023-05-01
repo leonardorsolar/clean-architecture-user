@@ -32,7 +32,9 @@ app.post("/signup", (req: Request, res: Response) => {
   // validação: caso os campos venham vazio
   if (!req.body) throw new Error("Insira as informações");
   // validação: caso o campo email não foi inserido
-  if (req.body.firstName.split(" ").length > 2) throw new Error("O nome tem que ter mais de 2 caracter");
+  console.log(req.body.password.length);
+  if (req.body.password.length < 5) throw new Error("O nome tem que ter mais de 5 caracter");
+  // if (req.body.firstName.split(" ").length > 2) throw new Error("O nome tem que ter mais de 2 caracter");
   // validação: caso existe um usuário no banco?
   const isExists = users.find((user: User) => user.password === req.body.password);
   // console.log(isExists);

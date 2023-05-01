@@ -8,6 +8,7 @@
     "dev": "nodemon --watch 'src/' --exec 'ts-node src/index.ts' -e ts",
     "start": "tsc && node ./build/src/index.js",
     "test": "tsc && jest ./build/test",
+    "clear_jest": "jest --clearCache",
     "build": "tsc"
   },
   "dependencies": {

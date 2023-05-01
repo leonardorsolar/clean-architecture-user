@@ -1,7 +1,13 @@
+import UserRepositoryMemory from "../infra/UserRepositoryMemory";
+
 export default class Signup {
-  constructor(readonly variável: string) {}
+  constructor(readonly userRepository: UserRepositoryMemory) {}
 
   execute(input: any): any {
+    // tradução do dto em algo fixo controlado
+    // user
+
+    this.userRepository.save(input);
     return input;
   }
 }
